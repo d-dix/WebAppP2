@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>US Senators</title>
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<aside>
+		<div>
+			<!-- <a class="summary" href="#part1A"><button>Summary</button></a>
+	  <a class="leadership" href="#part1B"><button>Leadership Roles</button></a>
+	  <a class="details" href="#part2-3"><button>Senator's Details</button></a> -->
+
+			<button id="s" onclick="">Summary</button></a>
+			<button id="L" onclick="">Leadership Roles</button></a>
+			<button id="D" onclick="">Senator's Details</button></a>
+		</div>
+	</aside>
+
+	<div id="error" class="infoHidden"></div>
+	<div class="logo">
+		<a href="#"><img src="./images/senate_logo.png" alt="senate logo"></a>
+	</div>
+
+	<div class="main">
+
+		<div id="part1A">
+			<h1>Summary Statistics of US Senators</h1>
+			<div id="summary"></div>
+			<div id="part1B">
+				<h1>Senators By Leadership Role</h1>
+				<div id="roles"></div>
+			</div>
+		</div>
+
+		<div id="part2-3">
+			<div class="dropdowns">
+				<div>
+					<span>Select Party</span><br>
+					<select id="parties-dropdown"></select>
+
+				</div>
+				<div>
+					<span>Select State</span><br>
+					<select id="states-dropdown"></select>
+				</div>
+				<div>
+					<span>Select Rank</span><br>
+					<select id="ranks-dropdown"></select>
+
+				</div>
+			</div>
+
+
+			<table id="sen-table">
+				<thead>
+					<tr id="head">
+						<th id="empty">US</th>
+						<th>Senator &#x2195;</th>
+						<th>Party &#x2195;</th>
+						<th>State &#x2195;</th>
+						<th>Gender &#x2195;</th>
+						<th>Rank &#x2195;</th>
+					</tr>
+				</thead>
+				<tbody id="senatorListAll">
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+
+	<script src="senators.js"></script>
+
+
+	</script>
+</body>
+
+</html>

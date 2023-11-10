@@ -1,0 +1,294 @@
+/* Variables for colors */
+:root {
+	--box-bg-color: rgba(221, 221, 221, 0.8);
+	--text-color: black;
+	--side-color: rgba(10, 49, 97, 0.8);
+}
+
+
+html {
+	height: 100%;
+	width: 100%;
+	scroll-behavior: smooth;
+	margin-top: 0;
+	font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-image: url('./images/ss.webp');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	padding-bottom: 30%;
+}
+
+.main {
+	margin-left: 15%;
+	margin-right: 4%;
+}
+
+.logo {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin-left: 10%;
+
+}
+
+
+aside {
+	width: 12%;
+	height: 100vh;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-width: 100px;
+
+}
+
+aside div {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	border-color: white;
+	height: 100%;
+}
+
+aside div button {
+	height: 100%;
+	width: 100%;
+	background-color: var(--side-color);
+	color: white;
+	font-weight: bold;
+	font-size: 1.1rem;
+	cursor: pointer;
+	border: none;
+	border-bottom: solid;
+}
+
+
+#part1A {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 5%;
+}
+
+h1 {
+	font-size: 1.7em;
+	text-align: center;
+	border-radius: 15px;
+	background-color: var(--box-bg-color);
+	padding-top: 1%;
+	padding-bottom: 1%;
+	color: var(--text-color);
+}
+
+#summary {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: space-between;
+	text-align: center;
+	flex: 1;
+}
+
+#summary p {
+	color: var(--text-color);
+	padding-top: 21%;
+	padding-bottom: 21%;
+	border-radius: 20px;
+	font-size: 1.8rem;
+	width: 30%;
+	background-color: var(--box-bg-color);
+	white-space: nowrap;
+	overflow: hidden;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+#summary p span {
+	font-size: 2.1rem;
+	font-style: italic;
+	font-weight: bold;
+	max-width: 100%;
+}
+
+#summary p span:nth-child(1) {
+	font-size: 4.2rem;
+	font-weight: bold;
+	font-style: normal;
+}
+
+#roles {
+	padding-left: 4%;
+	padding-right: 4%;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	background-color: var(--box-bg-color);
+	font-size: 1.3rem;
+	color: var(--text-color);
+
+	border-radius: 20px;
+	height: 100%;
+}
+
+#roles .leader {
+	font-weight: bold;
+}
+
+#roles .party {
+	font-style: italic;
+}
+
+
+
+
+@media (max-width: 1000px) {
+	#summary p {
+		font-size: 1.35rem;
+	}
+
+	#summary p span {
+		font-size: 1.575rem;
+	}
+
+	#summary p span:nth-child(1) {
+		font-size: 3.15rem;
+	}
+}
+
+@media (max-width: 700px) {
+	aside {
+		display: none;
+	}
+
+	.logo {
+		margin-left: 0;
+
+	}
+
+	.main {
+		margin-left: 5%;
+	}
+
+	#summary p {
+		font-size: 1.17rem;
+
+	}
+
+	#summary p span {
+		font-size: 1.365rem;
+
+	}
+
+	#summary p span:nth-child(1) {
+		font-size: 2.1rem;
+	}
+
+
+}
+
+.dropdowns {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	margin-bottom: 2%;
+	font-size: 1.2rem;
+	background-color: var(--side-color);
+	color: rgb(225, 223, 223);
+	border-radius: 20px;
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+
+select {
+	background-color: var(--side-color);
+	color: rgb(225, 223, 223);
+	margin-top: 7%;
+	font-size: 1.1rem;
+	text-align: center;
+
+}
+
+.infoHidden {
+	display: none;
+}
+
+.infoShow {
+	display: table-row;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td,
+th {
+	border: 1px solid #cfcece;
+	padding: 8px;
+	cursor: pointer;
+	text-align: center;
+}
+
+th {
+	background-color: rgba(255, 255, 255, 0.80);
+	font-weight: bolder;
+	font-size: 1.15rem;
+	position: relative;
+	text-align: center;
+	cursor: pointer;
+}
+
+/* Trying to get the first row to be clear  */
+table tbody:first-child {
+	background-color: transparent;
+}
+
+tr:nth-child(4n +1),
+tr:nth-child(4n +2) {
+	background-color: rgba(221, 221, 221, 0.85);
+	font-weight: bolder;
+}
+
+tr:nth-child(4n + 3),
+tr:nth-child(4n + 4) {
+	background-color: rgba(255, 255, 255, 0.85);
+	font-weight: bolder;
+}
+
+
+tr:nth-child(4n + 4) td {
+	text-align: left;
+	cursor: default;
+}
+
+tr:nth-child(4n +2) td {
+	cursor: default;
+	text-align: left;
+}
+
+/* This should expand to contain the message*/
+#error {
+	position: absolute;
+	top: 30%;
+	left: 55%;
+	transform: translate(-50%, -50%);
+	width: 50%;
+	min-height: 100px;
+	background-color: rgba(211, 211, 211, 0.90);
+	border-radius: 10px;
+	padding: 20px;
+	box-sizing: border-box;
+	text-align: center;
+	font-size: 1.5em;
+}
